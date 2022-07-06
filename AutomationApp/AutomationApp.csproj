@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D1E4E0B-0944-4AAA-9826-15675CF23296}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AutomationApp</RootNamespace>
+    <AssemblyName>AutomationApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>laptop-solid.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataGridViewGrouper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DataGridViewGrouper\bin\Debug\DataGridViewGrouper.dll</HintPath>
+    </Reference>
+    <Reference Include="FlatButton">
+      <HintPath>JControls\FlatButton.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JDragControl">
+      <HintPath>JControls\JDragControl.dll</HintPath>
+    </Reference>
+    <Reference Include="JImageButton">
+      <HintPath>JControls\JImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="JMaterialTextbox">
+      <HintPath>JControls\JMaterialTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="JMetroTextBox">
+      <HintPath>JControls\JMetroTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JTextBox">
+      <HintPath>.\JTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="JThinButton">
+      <HintPath>JControls\JThinButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Metroit.45, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Metroit.45.1.1.0\lib\net45\Metroit.45.dll</HintPath>
+    </Reference>
+    <Reference Include="Metroit.Windows.Forms.45, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Metroit.Windows.Forms.45.1.1.0\lib\net45\Metroit.Windows.Forms.45.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthenticationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticationForm.Designer.cs">
+      <DependentUpon>AuthenticationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutomationAppDBDataSet.cs">
+      <DependentUpon>AutomationAppDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AutomationAppDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutomationAppDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CalculationCardsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculationCardsForm.Designer.cs">
+      <DependentUpon>CalculationCardsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarsForm.Designer.cs">
+      <DependentUpon>CarsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClothOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClothOrdersForm.Designer.cs">
+      <DependentUpon>ClothOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClothsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClothsForm.Designer.cs">
+      <DependentUpon>ClothsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectDataBase.cs" />
+    <Compile Include="CounteragentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CounteragentsForm.Designer.cs">
+      <DependentUpon>CounteragentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DriversForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DriversForm.Designer.cs">
+      <DependentUpon>DriversForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCalculationCardsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCalculationCardsForm.Designer.cs">
+      <DependentUpon>EditCalculationCardsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCarsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCarsForm.Designer.cs">
+      <DependentUpon>EditCarsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditClothForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClothForm.Designer.cs">
+      <DependentUpon>EditClothForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditClothInOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClothInOrdersForm.Designer.cs">
+      <DependentUpon>EditClothInOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditClothOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClothOrdersForm.Designer.cs">
+      <DependentUpon>EditClothOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditClothsInCardsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClothsInCardsForm.Designer.cs">
+      <DependentUpon>EditClothsInCardsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCounteragentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCounteragentsForm.Designer.cs">
+      <DependentUpon>EditCounteragentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditDriversForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDriversForm.Designer.cs">
+      <DependentUpon>EditDriversForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditFurnitureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFurnitureForm.Designer.cs">
+      <DependentUpon>EditFurnitureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditFurnitureInCardsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFurnitureInCardsForm.Designer.cs">
+      <DependentUpon>EditFurnitureInCardsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditFurnitureInOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFurnitureInOrderForm.Designer.cs">
+      <DependentUpon>EditFurnitureInOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditFurnitureOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditFurnitureOrdersForm.Designer.cs">
+      <DependentUpon>EditFurnitureOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditItemForm.Designer.cs">
+      <DependentUpon>EditItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditLimitCardsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditLimitCardsForm.Designer.cs">
+      <DependentUpon>EditLimitCardsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProductsInNoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProductsInNoteForm.Designer.cs">
+      <DependentUpon>EditProductsInNoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProvidersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProvidersForm.Designer.cs">
+      <DependentUpon>EditProvidersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditReceivedItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditReceivedItemsForm.Designer.cs">
+      <DependentUpon>EditReceivedItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditRouteSheetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditRouteSheetsForm.Designer.cs">
+      <DependentUpon>EditRouteSheetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditTradeNoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditTradeNoteForm.Designer.cs">
+      <DependentUpon>EditTradeNoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditWorkshopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditWorkshopForm.Designer.cs">
+      <DependentUpon>EditWorkshopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedPanel.cs" />
+    <Compile Include="FormDragSettings.cs" />
+    <Compile Include="FurnitureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FurnitureForm.Designer.cs">
+      <DependentUpon>FurnitureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemsForm.Designer.cs">
+      <DependentUpon>ItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LimitCardsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LimitCardsForm.Designer.cs">
+      <DependentUpon>LimitCardsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProvidersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvidersForm.Designer.cs">
+      <DependentUpon>ProvidersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReceivedItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReceivedItemsForm.Designer.cs">
+      <DependentUpon>ReceivedItemsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportClothOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportClothOrderForm.Designer.cs">
+      <DependentUpon>ReportClothOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSheetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSheetsForm.Designer.cs">
+      <DependentUpon>ReportSheetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportWarhouseClothForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportWarhouseClothForm.Designer.cs">
+      <DependentUpon>ReportWarhouseClothForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportReceivedItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportReceivedItemForm.Designer.cs">
+      <DependentUpon>ReportReceivedItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RouteSheetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RouteSheetsForm.Designer.cs">
+      <DependentUpon>RouteSheetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SectionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SectionsForm.Designer.cs">
+      <DependentUpon>SectionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SettingsUserControl.Designer.cs">
+      <DependentUpon>SettingsUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TradeNoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradeNoteForm.Designer.cs">
+      <DependentUpon>TradeNoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TradeTransportNoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TradeTransportNoteForm.Designer.cs">
+      <DependentUpon>TradeTransportNoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseClothsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseClothsForm.Designer.cs">
+      <DependentUpon>WarehouseClothsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseFurnitureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseFurnitureForm.Designer.cs">
+      <DependentUpon>WarehouseFurnitureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseProductsForm.Designer.cs">
+      <DependentUpon>WarehouseProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WorkshopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorkshopForm.Designer.cs">
+      <DependentUpon>WorkshopForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AuthenticationForm.resx">
+      <DependentUpon>AuthenticationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalculationCardsForm.resx">
+      <DependentUpon>CalculationCardsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarsForm.resx">
+      <DependentUpon>CarsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClothOrdersForm.resx">
+      <DependentUpon>ClothOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClothsForm.resx">
+      <DependentUpon>ClothsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CounteragentsForm.resx">
+      <DependentUpon>CounteragentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DriversForm.resx">
+      <DependentUpon>DriversForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCalculationCardsForm.resx">
+      <DependentUpon>EditCalculationCardsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCarsForm.resx">
+      <DependentUpon>EditCarsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClothForm.resx">
+      <DependentUpon>EditClothForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClothInOrdersForm.resx">
+      <DependentUpon>EditClothInOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClothOrdersForm.resx">
+      <DependentUpon>EditClothOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClothsInCardsForm.resx">
+      <DependentUpon>EditClothsInCardsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCounteragentsForm.resx">
+      <DependentUpon>EditCounteragentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDriversForm.resx">
+      <DependentUpon>EditDriversForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFurnitureForm.resx">
+      <DependentUpon>EditFurnitureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFurnitureInCardsForm.resx">
+      <DependentUpon>EditFurnitureInCardsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFurnitureInOrderForm.resx">
+      <DependentUpon>EditFurnitureInOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditFurnitureOrdersForm.resx">
+      <DependentUpon>EditFurnitureOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditItemForm.resx">
+      <DependentUpon>EditItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditLimitCardsForm.resx">
+      <DependentUpon>EditLimitCardsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProductsInNoteForm.resx">
+      <DependentUpon>EditProductsInNoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProvidersForm.resx">
+      <DependentUpon>EditProvidersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditReceivedItemsForm.resx">
+      <DependentUpon>EditReceivedItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditRouteSheetsForm.resx">
+      <DependentUpon>EditRouteSheetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTradeNoteForm.resx">
+      <DependentUpon>EditTradeNoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWorkshopForm.resx">
+      <DependentUpon>EditWorkshopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FurnitureForm.resx">
+      <DependentUpon>FurnitureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemsForm.resx">
+      <DependentUpon>ItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LimitCardsForm.resx">
+      <DependentUpon>LimitCardsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProvidersForm.resx">
+      <DependentUpon>ProvidersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReceivedItemsForm.resx">
+      <DependentUpon>ReceivedItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportClothOrder.rdlc" />
+    <EmbeddedResource Include="ReportClothOrderForm.resx">
+      <DependentUpon>ReportClothOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportRecieved.rdlc" />
+    <EmbeddedResource Include="ReportSheets.rdlc" />
+    <EmbeddedResource Include="ReportSheetsForm.resx">
+      <DependentUpon>ReportSheetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportWarehouseCloth.rdlc" />
+    <EmbeddedResource Include="ReportWarhouseClothForm.resx">
+      <DependentUpon>ReportWarhouseClothForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportReceivedItemForm.resx">
+      <DependentUpon>ReportReceivedItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RouteSheetsForm.resx">
+      <DependentUpon>RouteSheetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SectionsForm.resx">
+      <DependentUpon>SectionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsUserControl.resx">
+      <DependentUpon>SettingsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradeNoteForm.resx">
+      <DependentUpon>TradeNoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TradeTransportNoteForm.resx">
+      <DependentUpon>TradeTransportNoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseClothsForm.resx">
+      <DependentUpon>WarehouseClothsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseFurnitureForm.resx">
+      <DependentUpon>WarehouseFurnitureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WarehouseProductsForm.resx">
+      <DependentUpon>WarehouseProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkshopForm.resx">
+      <DependentUpon>WorkshopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AutomationAppDBDataSet.xsc">
+      <DependentUpon>AutomationAppDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AutomationAppDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AutomationAppDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AutomationAppDBDataSet.xss">
+      <DependentUpon>AutomationAppDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen-solid5.png" />
+    <None Include="Resources\trash-alt-solidFOUR.png" />
+    <None Include="Resources\print-solidTWO.png" />
+    <None Include="Resources\print-solidThree.png" />
+    <None Include="Resources\printTWO.png" />
+    <Content Include="laptop-solid.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
