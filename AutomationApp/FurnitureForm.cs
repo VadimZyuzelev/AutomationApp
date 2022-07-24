@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Subro.Controls;
 
@@ -41,9 +36,7 @@ namespace AutomationApp
         private void FurnitureForm_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "automationAppDBDataSet.Модели_фурнитуры". При необходимости она может быть перемещена или удалена.
-            this.модели_фурнитурыTableAdapter.Fill(this.automationAppDBDataSet.Модели_фурнитуры);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "automationAppDBDataSet.Склад_фурнитуры". При необходимости она может быть перемещена или удалена.
-            //this.склад_фурнитурыTableAdapter.Fill(this.automationAppDBDataSet.Склад_фурнитуры);
+            this.модели_фурнитурыTableAdapter.Fill(this.automationAppDBDataSet.Модели_фурнитуры);                        
             // TODO: данная строка кода позволяет загрузить данные в таблицу "automationAppDBDataSet.Фурнитура". При необходимости она может быть перемещена или удалена.
             this.фурнитураTableAdapter.Fill(this.automationAppDBDataSet.Фурнитура);
 
@@ -72,8 +65,7 @@ namespace AutomationApp
         private void ModelFurnitureDataGridView_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (FlagSelectFurnitureInOrder)
-            {
-                //EditFurnitureInOrderForm.ID_Cloth = Convert.ToInt32(((DataRowView)this.моделитканиBindingSource.Current).Row["ID_Ткани"]);
+            {                
                 EditFurnitureInOrderForm.ID_ModelFurniture = Convert.ToInt32(((DataRowView)this.модели_фурнитурыBindingSource.Current).Row["ID_Модели_фурнитуры"]);
                 EditFurnitureInOrderForm.Furniture = Convert.ToString(((DataRowView)this.модели_фурнитурыBindingSource.Current).Row["Наименование"]);
                 EditFurnitureInOrderForm.ModelFurniture = Convert.ToString(((DataRowView)this.модели_фурнитурыBindingSource.Current).Row["Модель_фурнитуры"]);

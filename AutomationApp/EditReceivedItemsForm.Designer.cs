@@ -426,8 +426,7 @@ namespace AutomationApp
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EditReceivedItemsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EditReceivedItemsForm";
-            this.Load += new System.EventHandler(this.EditReceivedItemsForm_Load);
+            this.Text = "EditReceivedItemsForm";            
             this.TitlePanel.ResumeLayout(false);
             this.TitlePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();

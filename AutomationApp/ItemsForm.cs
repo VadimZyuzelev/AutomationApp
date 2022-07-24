@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Subro.Controls;
 
@@ -13,13 +8,13 @@ namespace AutomationApp
 {
     public partial class ItemsForm : Form
     {
-        private EditRouteSheetsForm EditRouteSheetsForm;
-        private EditCalculationCardsForm EditCalculationCardsForm;
-        private EditLimitCardsForm EditLimitCardsForm;
+        private readonly EditRouteSheetsForm EditRouteSheetsForm;
+        private readonly EditCalculationCardsForm EditCalculationCardsForm;
+        private readonly EditLimitCardsForm EditLimitCardsForm;
 
-        private bool FlagSelectItemsInRouteSheet;
-        private bool FlagSelectItemsInCard;
-        private bool FlagSelectItemsInLimitCard;
+        private readonly bool FlagSelectItemsInRouteSheet;
+        private readonly bool FlagSelectItemsInCard;
+        private readonly bool FlagSelectItemsInLimitCard;
         public ItemsForm()
         {
             InitializeComponent();

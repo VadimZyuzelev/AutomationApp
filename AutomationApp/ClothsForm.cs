@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Subro.Controls;
 
@@ -13,8 +8,8 @@ namespace AutomationApp
 {
     public partial class ClothsForm : Form
     {
-        private EditClothInOrdersForm EditClothInOrdersForm;
-        private bool FlagSelectClothInOrder;
+        private readonly EditClothInOrdersForm EditClothInOrdersForm;
+        private readonly bool FlagSelectClothInOrder;
 
         public ClothsForm()
         {

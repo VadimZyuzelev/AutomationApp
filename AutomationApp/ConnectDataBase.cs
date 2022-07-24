@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 
@@ -14,10 +8,6 @@ namespace AutomationApp
     {
         private SqlConnection sqlConnection;
         private SqlConnectionStringBuilder stringBuilder;
-        /*public ConnectDataBase()
-        {
-            //InitializeComponent();
-        }*/
 
         private void SetStringConnection()
         {

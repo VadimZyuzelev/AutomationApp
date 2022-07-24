@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.InteropServices;
 
 namespace AutomationApp
 {
     public class FormDragSettings
     {
-        private System.IntPtr _hWnd;
-        private int _wMsg;
-        private int _wParam;
-        private int _lParam; 
+        private readonly System.IntPtr _hWnd;
+        private readonly int _wMsg;
+        private readonly int _wParam;
+        private readonly int _lParam; 
 
         public FormDragSettings(System.IntPtr hWnd, int wMsg, int wParam, int lParam)
         {

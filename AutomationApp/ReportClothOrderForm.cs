@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutomationApp
@@ -25,11 +18,6 @@ namespace AutomationApp
             // TODO: данная строка кода позволяет загрузить данные в таблицу "AutomationAppDBDataSet.Приходные_ордера_на_ткань". При необходимости она может быть перемещена или удалена.
             this.Приходные_ордера_на_тканьTableAdapter.Fill(this.AutomationAppDBDataSet.Приходные_ордера_на_ткань);
             this.OrderReportViewer.RefreshReport();
-        }
-
-        private void TitleBarLabel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

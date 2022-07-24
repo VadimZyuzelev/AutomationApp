@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutomationApp
@@ -14,8 +9,8 @@ namespace AutomationApp
     {
         private const int CS_DROPSHADOW = 0x20000;
 
-        private LimitCardsForm LimitCardsForm;
-        private EditLimitCardsForm EditLimitCardsForm;
+        private readonly LimitCardsForm LimitCardsForm;
+        private readonly EditLimitCardsForm EditLimitCardsForm;
 
         private int id_ModelFurniture;
         private int id_FurnitureWarehouse;
@@ -184,9 +179,7 @@ namespace AutomationApp
         }
 
         private void CountTextBox_TextChanged(object sender, EventArgs e)
-        {
-            //CountTextBox.ForeColor = Color.Black;
-
+        {            
             if (CountFurniture != 0)
             {
                 if (CountTextBox.Text != "")

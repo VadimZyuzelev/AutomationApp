@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 
 namespace AutomationApp
 {
@@ -151,20 +143,7 @@ namespace AutomationApp
             ExitButton.IconColor = Color.White;
 
             Application.Exit();
-        }
-
-        /*private void ShowSubMenu(Panel SubMenu)
-        {
-            if(!SubMenu.Visible)
-            {
-                SubMenu.Visible = true;
-            }
-            else
-            {
-                SubMenu.Visible = false;
-            }
-        }*/
-        
+        }       
         private void OrdersFurnitureButton_Click(object sender, EventArgs e)
         {
             TitleBarLabel.Text = "Приходные ордера";

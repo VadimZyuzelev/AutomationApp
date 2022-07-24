@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 
@@ -28,11 +22,7 @@ namespace AutomationApp
 
         private void AddRecivedButton_Click(object sender, EventArgs e)
         {
-            //bool FlagSelectSheet = true;
-
             EditReceivedItemsForm EditReceivedItemsForm = new EditReceivedItemsForm(this);
-            //RouteSheetsForm RouteSheetsForm = new RouteSheetsForm(EditReceivedItemsForm, FlagSelectSheet);
-            //RouteSheetsForm.ShowDialog();
             EditReceivedItemsForm.ShowDialog();
         }
 

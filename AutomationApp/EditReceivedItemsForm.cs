@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutomationApp
 {
     public partial class EditReceivedItemsForm : Form
     {
-        private ReceivedItemsForm ReceivedItemsForm;
+        private readonly ReceivedItemsForm ReceivedItemsForm;
 
         private int id_routeSheet;
         private int count;
@@ -102,27 +95,12 @@ namespace AutomationApp
             this.DoubleBuffered = true;
         }
 
-        private void EditReceivedItemsForm_Load(object sender, EventArgs e)
-        {
-            
-            //CountTextBox.Text = Convert.ToString(Count);
-            //SortItemTextBox.Text = Convert.ToString(Sort);
-
-        }
-
         private void SaveItemButton_Click(object sender, EventArgs e)
         {
-            //if (!CheckEmptyData())
-            //{
-                //if (!CheckRepeatData())
-                //{
-                    Count = Convert.ToInt32(CountTextBox.TextName);
-                    Sort = Convert.ToInt32(SortItemTextBox.TextName);
+            Count = Convert.ToInt32(CountTextBox.TextName);
+            Sort = Convert.ToInt32(SortItemTextBox.TextName);
 
-                    ReceivedItemsForm.изделия_принятые_на_складTableAdapter.Insert(ID_RouteSheet, Count, Sort);
-                    ReceivedItemsForm.изделия_принятые_на_складTableAdapter.Fill(ReceivedItemsForm.automationAppDBDataSet.Изделия_принятые_на_склад);
-                //}
-            //}
+            ReceivedItemsForm.изделия_принятые_на_складTableAdapter.Insert(ID_RouteSheet, Count, Sort);
         }
 
         private void SelectButton_Click(object sender, EventArgs e)
@@ -146,16 +124,5 @@ namespace AutomationApp
         {
             this.Close();
         }
-
-        /*private bool CheckEmptyData()
-        { 
-
-        }
-
-        private bool CheckRepeatData()
-        {
-
-        }*/
-
     }
 }

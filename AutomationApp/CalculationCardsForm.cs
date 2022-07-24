@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutomationApp
@@ -96,8 +90,6 @@ namespace AutomationApp
             if (SearchTextBox.Text == "")
             {
                 this.расчётныекартыBindingSource.Filter = "";
-                //SearchTextBox.Text = "Введите ваш запрос";
-                //SearchTextBox.ForeColor = Color.FromArgb(164, 167, 180);
             }
         }
 

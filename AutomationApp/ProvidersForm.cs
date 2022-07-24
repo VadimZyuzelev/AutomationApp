@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutomationApp
@@ -14,10 +9,10 @@ namespace AutomationApp
     {
         private const int CS_DROPSHADOW = 0x20000;
 
-        private EditOrdersForm EditOrdersForm;
-        private EditClothOrdersForm EditForm;
-        private bool FlagSelectProvidersInOrder;
-        private bool FlagSelectProvidersInFurnitureOrder;
+        private readonly EditOrdersForm EditOrdersForm;
+        private readonly EditClothOrdersForm EditForm;
+        private readonly bool FlagSelectProvidersInOrder;
+        private readonly bool FlagSelectProvidersInFurnitureOrder;
 
         public ProvidersForm()
         {
@@ -201,16 +196,6 @@ namespace AutomationApp
         {
             ExitButton.IconColor = Color.Gray;
         }
-
-        /*protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.ClassStyle |= CS_DROPSHADOW;
-                return cp;
-            }
-        }*/
 
         private void TopPanel_MouseDown(object sender, MouseEventArgs e)
         {

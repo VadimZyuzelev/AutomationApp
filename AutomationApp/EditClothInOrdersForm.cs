@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutomationApp
@@ -150,39 +145,31 @@ namespace AutomationApp
         }
 
         private void CountTextBox_Enter(object sender, EventArgs e)
-        {
-            //CountTextBox.BorderColor = Color.FromArgb(222, 223, 226);
+        {            
             CountErrorLabel.Visible = false;
         }
 
         private void PriceTextBox_Enter(object sender, EventArgs e)
-        {
-            //PriceTextBox.BorderColor = Color.FromArgb(222, 223, 226);
+        {         
             PriceErrorLabel.Visible = false;
         }
 
         private void CountTextBox_TextChanged(object sender, EventArgs e)
         {
-            //if (!CheckEmptyData())
-            //{
-                CalculatingSum();
-            //}
+            CalculatingSum();
+            
         }
 
         private void PriceTextBox_TextChanged(object sender, EventArgs e)
         {
-            //if (!CheckEmptyData())
-            //{
-                CalculatingSum();
-            //}
+            CalculatingSum();
+            
         }
 
         private void SumNDSTextBox_TextChanged(object sender, EventArgs e)
         {
-            //if (!CheckEmptyData())
-            //{
-                CalculatingSum();
-            //}
+            CalculatingSum();
+            
         }
 
         private void TitlePanel_MouseDown(object sender, MouseEventArgs e)
@@ -269,15 +256,13 @@ namespace AutomationApp
             }
 
             if (CountTextBox.Text == "")
-            {
-                //CountTextBox.BorderColor = Color.FromArgb(255, 128, 128);
+            {             
                 CountErrorLabel.Visible = true;
                 FlagEmpty = true;
             }
 
             if (PriceTextBox.Text == "")
             {
-                //PriceTextBox.BorderColor = Color.FromArgb(255, 128, 128);
                 PriceErrorLabel.Visible = true;
                 FlagEmpty = true;
             }
@@ -286,7 +271,6 @@ namespace AutomationApp
             {
                 if (Convert.ToInt32(SumNDSTextBox.Text) <= 0)
                 {
-                    //SumNDSTextBox.BorderColor = Color.FromArgb(255, 128, 128);
                     SumNDSErrorLabel.Visible = true;
                     FlagEmpty = true;
                 }
@@ -351,7 +335,6 @@ namespace AutomationApp
             }
 
         }
-
 
         protected override CreateParams CreateParams
         {

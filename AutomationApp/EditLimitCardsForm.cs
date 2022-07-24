@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 
@@ -15,8 +10,8 @@ namespace AutomationApp
     {
         private const int CS_DROPSHADOW = 0x20000;
 
-        private LimitCardsForm LimitCardsForm;
-        private bool FlagEdit;
+        private readonly LimitCardsForm LimitCardsForm;
+        private readonly bool FlagEdit;
 
         private int ID_LimitCard;
 
@@ -161,28 +156,7 @@ namespace AutomationApp
                 AddFurnitureButton.Enabled = false;
 
                 TopLabel.Text = "Редактирование лимитно-заборной карты";
-                TopIcon.IconChar = IconChar.Pen;
-
-                /*WorkshopComboBox.SelectedValue = ((DataRowView)LimitCardsForm.лимитнозаборныекартыBindingSource.Current).Row["ID_Цеха"];
-                BrigadeComboBox.SelectedValue = ((DataRowView)LimitCardsForm.лимитнозаборныекартыBindingSource.Current).Row["ID_Бригады"];
-                ItemComboBox.SelectedValue = ((DataRowView)LimitCardsForm.лимитнозаборныекартыBindingSource.Current).Row["ID_Изделия"];
-                ModelComboBox.SelectedValue = ((DataRowView)LimitCardsForm.лимитнозаборныекартыBindingSource.Current).Row["ID_Модели_изделия"];
-                System.Windows.Forms.DateTimePicker.Value = Convert.ToDateTime(((DataRowView)LimitCardsForm.лимитнозаборныекартыBindingSource.Current).Row["Дата_составления"]);
-                CountItemsTextBox.Text = Convert.ToString(((DataRowView)LimitCardsForm.лимитнозаборныекартыBindingSource.Current).Row["Количество_изделий"]);
-                /*WarehouseTextBox.Text = Convert.ToString(((DataRowView)OrdersForm.приходные_ордера_на_фурнитуруBindingSource.Current).Row["Склад"]);
-                CorrespondingAccountTextBox.Text = Convert.ToString(((DataRowView)OrdersForm.приходные_ордера_на_фурнитуруBindingSource.Current).Row["Корреспондирующий_счет"]);
-                FollowDocumentTextBox.Text = Convert.ToString(((DataRowView)OrdersForm.приходные_ордера_на_фурнитуруBindingSource.Current).Row["Сопроводительный_документ"]);
-                SumOrderTextBox.Text = Convert.ToString(((DataRowView)OrdersForm.приходные_ордера_на_фурнитуруBindingSource.Current).Row["Сумма"]);*/
-
-                //MaterialsOrderFurnitureDataGridView.DataSource = fKМатериальIDПр5AEE82B9BindingSource;
-
-                // Присваиваем Binding Source с главной формы для отображения фурнитуры
-                // в соответствии с выбранным приходным ордером.
-
-                /*AddFurnitureButton.Enabled = false;
-                EditFurnitureButton.Enabled = false;
-                DeleteFurnitureButton.Enabled = false;
-                MaterialsOrderFurnitureDataGridView.Enabled = false;*/
+                TopIcon.IconChar = IconChar.Pen;              
             }
             else
             { 
@@ -226,13 +200,9 @@ namespace AutomationApp
                     LimitCardsForm.лимитно_заборные_картыTableAdapter.Update(LimitCardsForm.automationAppDBDataSet.Лимитно_заборные_карты);
                     LimitCardsForm.лимитно_заборные_картыTableAdapter.Fill(LimitCardsForm.automationAppDBDataSet.Лимитно_заборные_карты);
                 }
-
-                //OrdersForm.приходные_ордера_на_фурнитуруTableAdapter.Fill(OrdersForm.automationAppDBDataSet.Приходные_ордера_на_фурнитуру);
-                //OrdersForm.материальные_ценности_по_ордеру_на_фурнитуруTableAdapter.Fill(OrdersForm.automationAppDBDataSet.Материальные_ценности_по_ордеру_на_фурнитуру);
             }
             else
             {
-                //this.Dispose();
                 this.Close();
             }
         }

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
 
@@ -13,7 +8,6 @@ namespace AutomationApp
 {
     public partial class RouteSheetsForm : Form
     {
-        //private MenuCutPickerUser MenuCutPickerUser;
         private readonly EditReceivedItemsForm EditReceivedItemsForm;
 
         private readonly bool FlagSelectSheet;
@@ -40,23 +34,6 @@ namespace AutomationApp
             this.DoubleBuffered = true;
         }
         
-        /*public RouteSheetsForm(MenuCutPickerUser MenuCutPickerUserTwo)
-        {
-            InitializeComponent();
-            //this.MainForm = MainFormTwo;
-          */
-
-
-        /*public int ID_Model
-        {
-            get { return id_model = Convert.ToInt32(((DataRowView)маршрутные_листыBindingSource.Current).Row["ID_Модели_изделия"]); }
-        }*/
-        /*public RouteSheetsForm(MainForm mainForm)
-        {
-            InitializeComponent();
-            this._mainForm = mainForm;
-        }*/
-
         public void SetPanel()
         {
             this.pan = new ExtendedPanel();
@@ -132,15 +109,6 @@ namespace AutomationApp
 
                 reportFormTwo.Show();
             }
-
-
-            //var senderGrid = (DataGridView)sender;
-
-            /*if (senderGrid.Columns[e.ColumnIndex] is DataGridViewImageColumn &&
-                e.RowIndex >= 0)
-            {
-                MessageBox.Show("ЫАЫЫ");
-            }*/
         }
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
@@ -173,9 +141,7 @@ namespace AutomationApp
             }
             if (SearchTextBox.Text == "")
             {
-                this.маршрутныелистыBindingSource.Filter = "";
-                //SearchTextBox.Text = "Введите ваш запрос";
-                //SearchTextBox.ForeColor = Color.FromArgb(164, 167, 180);
+                this.маршрутныелистыBindingSource.Filter = "";               
             }
             
         }
@@ -187,11 +153,6 @@ namespace AutomationApp
                 SearchTextBox.Text = "";
                 SearchTextBox.ForeColor = Color.FromArgb(86, 87, 96);
             }
-        }
-
-        private void SearchTextBox_Leave(object sender, EventArgs e)
-        {
-            
         }
 
         private void AddSheetButton_Click(object sender, EventArgs e)

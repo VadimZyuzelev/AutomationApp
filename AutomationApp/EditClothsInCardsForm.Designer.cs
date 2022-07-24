@@ -402,7 +402,6 @@ namespace AutomationApp
             this.Name = "EditClothsInCardsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditClothsInCardsForm";
-            this.Load += new System.EventHandler(this.EditClothsInCardsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.TitlePanel.ResumeLayout(false);
             this.TitlePanel.PerformLayout();

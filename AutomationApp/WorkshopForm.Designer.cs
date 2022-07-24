@@ -107,8 +107,7 @@ namespace AutomationApp
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1130, 51);
             this.TopPanel.TabIndex = 12;
-            this.TopPanel.Visible = false;
-            this.TopPanel.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDoubleClick);
+            this.TopPanel.Visible = false;            
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             // 
             // label1

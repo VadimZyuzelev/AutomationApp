@@ -179,11 +179,7 @@ namespace AutomationApp
 
         private System.Windows.Forms.DataGridView WarehouseProductsDataGridView;
         public AutomationAppDBDataSet automationAppDBDataSet;
-        public AutomationAppDBDataSetTableAdapters.Склад_готовой_продукцииTableAdapter склад_готовой_продукцииTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn наименованиеDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn модельизделияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ценаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDИзделияDataGridViewTextBoxColumn;
+        public AutomationAppDBDataSetTableAdapters.Склад_готовой_продукцииTableAdapter склад_готовой_продукцииTableAdapter;        
         private System.Windows.Forms.BindingSource изделияпринятыенаскладBindingSource;
         private AutomationAppDBDataSetTableAdapters.Изделия_принятые_на_складTableAdapter изделия_принятые_на_складTableAdapter;
         private System.Windows.Forms.BindingSource складготовойпродукцииBindingSource;

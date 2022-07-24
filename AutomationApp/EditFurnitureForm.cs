@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutomationApp
@@ -14,8 +9,8 @@ namespace AutomationApp
     {
         private const int CS_DROPSHADOW = 0x20000;
 
-        private FurnitureForm FurnitureForm;
-        private bool FlagEdit;
+        private readonly FurnitureForm FurnitureForm;
+        private readonly bool FlagEdit;
 
         private int ID_Furniture;
         private int ID_Model;

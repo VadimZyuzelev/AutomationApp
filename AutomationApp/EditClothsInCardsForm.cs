@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using FontAwesome.Sharp;
 
 namespace AutomationApp
 {
@@ -126,21 +120,6 @@ namespace AutomationApp
             this.Text = string.Empty;
             this.ControlBox = false;
             this.DoubleBuffered = true;
-        }
-
-        private void EditClothsInCardsForm_Load(object sender, EventArgs e)
-        {
- 
-        }
-
-        private void NameCothComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void SelectClothsButton_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void SaveItemButton_Click(object sender, EventArgs e)

@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Subro.Controls;
-using Microsoft.Reporting.WinForms;
 
 namespace AutomationApp
 {
@@ -141,21 +135,6 @@ namespace AutomationApp
         private void CreateReprotButton_Click(object sender, EventArgs e)
         {
             ReportWarhouseClothForm warehouseClothForm = new ReportWarhouseClothForm();
-            //ReportSheetsForm reportFormTwo = new ReportSheetsForm();
-
-            /*ReportParameter[] parametrs = new ReportParameter[8];
-            parametrs[0] = new ReportParameter("NumberSheet", Convert.ToString(((DataRowView)this.маршрутныелистыBindingSource.Current).Row["ID_Маршрутного_листа"]));
-            parametrs[1] = new ReportParameter("NumberTicketParameter", Convert.ToString(((DataRowView)this.маршрутныелистыBindingSource.Current).Row["Номер_заказа"]));
-            parametrs[2] = new ReportParameter("ItemParameter", Convert.ToString(((DataRowView)this.маршрутныелистыBindingSource.Current).Row["Наименование"]));
-            parametrs[3] = new ReportParameter("ModelParameter", Convert.ToString(((DataRowView)this.маршрутныелистыBindingSource.Current).Row["Модель_изделия"]));
-            parametrs[4] = new ReportParameter("GrowthParameter", Convert.ToString(((DataRowView)this.маршрутныелистыBindingSource.Current).Row["Рост"]));
-            parametrs[5] = new ReportParameter("SizeParameter", Convert.ToString(((DataRowView)this.маршрутныелистыBindingSource.Current).Row["Размер"]));
-            parametrs[6] = new ReportParameter("FullnessParameter", Convert.ToString(((DataRowView)this.маршрутныелистыBindingSource.Current).Row["Полнота"]));
-            parametrs[7] = new ReportParameter("ColorParameter", Convert.ToString(((DataRowView)this.маршрутныелистыBindingSource.Current).Row["Код_цвета"]));
-
-            reportFormTwo.SheetsReportViewer.LocalReport.SetParameters(parametrs);
-            reportFormTwo.SheetsReportViewer.RefreshReport();*/
-
             warehouseClothForm.Show();
         }
 

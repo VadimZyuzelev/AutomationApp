@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Subro.Controls;
 
@@ -149,8 +144,6 @@ namespace AutomationApp
             if (SearchTextBox.Text == "")
             {
                 this.бригадыBindingSource.Filter = "";
-                //SearchTextBox.Text = "Введите ваш запрос";
-                //SearchTextBox.ForeColor = Color.FromArgb(164, 167, 180);
             }
         }
 
@@ -220,11 +213,6 @@ namespace AutomationApp
         private void ExitButton_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void TopPanel_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-
         }
     }
 }

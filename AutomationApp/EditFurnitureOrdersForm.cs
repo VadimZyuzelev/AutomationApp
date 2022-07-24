@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutomationApp
@@ -15,7 +10,6 @@ namespace AutomationApp
         private const int CS_DROPSHADOW = 0x20000;
 
         private readonly OrdersForm OrdersForm;
-        //private WarehouseFurnitureForm WarehouseFurnitureForm;
 
         private readonly bool FlagEdit;
 
@@ -63,16 +57,6 @@ namespace AutomationApp
             this.ControlBox = false;
             this.DoubleBuffered = true;
         }
-
-        /*public EditOrdersForm(OrdersForm ordersForm, WarehouseFurnitureForm warehouseFurnitureForm)
-        {
-            InitializeComponent();
-            this.OrdersForm = ordersForm;
-            this.WarehouseFurnitureForm = warehouseFurnitureForm;
-            this.Text = string.Empty;
-            this.ControlBox = false;
-            this.DoubleBuffered = true;
-        }*/
 
         public EditOrdersForm(OrdersForm ordersForm, bool flagEdit)
         {
@@ -350,8 +334,6 @@ namespace AutomationApp
             if (SearchTextBox.Text == "")
             {
                 this.fKМатериальIDПр1F63A897BindingSource.Filter = "";
-                //SearchTextBox.Text = "Введите ваш запрос";
-                //SearchTextBox.ForeColor = Color.FromArgb(164, 167, 180);
             }
         }
 
@@ -432,10 +414,3 @@ namespace AutomationApp
         }
     }
 }
-
-
-//SummOrders = ;
-/*ID_Furniture = Convert.ToInt32(FurnitureComboBox.SelectedValue);
-UnitDetermination = Convert.ToString(UnitDeterminationComboBox.SelectedValue);
-Count = Convert.ToInt32(CountTextBox.Text);
-Price = Convert.ToInt32(PriceTextBox.Text);*/

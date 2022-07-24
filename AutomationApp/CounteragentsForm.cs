@@ -1,21 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutomationApp
 {
     public partial class CounteragentsForm : Form
     {
-        private EditTradeNoteForm EditTradeNoteForm;
+        private readonly EditTradeNoteForm EditTradeNoteForm;
 
-        private bool FlagSelectSender;
-        private bool FlagSelectCargoReceiver;
+        private readonly bool FlagSelectSender;
+        private readonly bool FlagSelectCargoReceiver;
 
         public CounteragentsForm()
         {

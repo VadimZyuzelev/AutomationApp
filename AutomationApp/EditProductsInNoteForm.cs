@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AutomationApp
@@ -13,12 +8,6 @@ namespace AutomationApp
     public partial class EditProductsInNoteForm : Form
     {
         private const int CS_DROPSHADOW = 0x20000;
-
-        /*private readonly EditOrdersForm EditOrdersForm;
-        private readonly OrdersForm OrdersForm;
-
-        private int ID_Order;
-        bool FlagEdit;*/
 
         private readonly TradeNoteForm TradeNote;
         private readonly EditTradeNoteForm EditTradeNote;
@@ -121,24 +110,12 @@ namespace AutomationApp
             InitializeComponent();
         }
 
-        /*public EditProductsInNoteForm(TradeNoteForm tradeNote)
-        {
-            InitializeComponent();
-            this.TradeNote = tradeNote;
-            //this.EditTradeNote = editTradeNote;
-        }*/
-
         public EditProductsInNoteForm(TradeNoteForm tradeNote, EditTradeNoteForm editTradeNote)
         {
             InitializeComponent();
             this.TradeNote = tradeNote;
             this.EditTradeNote = editTradeNote;
         }
-
-        /*public EditProductsInNoteForm()
-        {
-            InitializeComponent();
-        }*/
 
         private void SelectButton_Click(object sender, EventArgs e)
         {
@@ -150,7 +127,6 @@ namespace AutomationApp
             NameTextBox.TextName = Products;
             ModelTextBox.TextName = ModelProducts;
             UnitDeterminationTextBox.TextName = UnitDetermination;
-            //CountTextBox.TextName = Convert.ToString(CountProducts);
             SortTextBox.TextName = Sort;
             CountErrorLabel.Visible = true;
             CountErrorLabel.ForeColor = Color.Black;
@@ -200,7 +176,6 @@ namespace AutomationApp
             decimal Price;
             decimal CostProducts;
             int BetNDS;
-            //decimal SumWithoutNDS;
             int SumNDS;
             int TotalWithNDS;
 
@@ -215,9 +190,6 @@ namespace AutomationApp
                     BetNDS = Convert.ToInt32(BetNDSTextBox.TextName);
                     SumNDS = Convert.ToInt32(SumNDSTextBox.TextName);
                     TotalWithNDS = Convert.ToInt32(TotalNDSTextBox.TextName);
-
-                    //SumWithoutNDS = Convert.ToDecimal(SumWithoutNDSTextBox.TextName);
-                    //SumTotalNDS = Convert.ToDecimal(SumTotalNDSTextBox.TextName);
 
                     if (BetNDSTextBox.Text == "")
                     {
@@ -262,15 +234,13 @@ namespace AutomationApp
             }
 
             if (CountTextBox.Text == "")
-            {
-                //CountTextBox.BorderColor = Color.FromArgb(255, 128, 128);
+            {                
                 CountErrorLabel.Visible = true;
                 FlagEmpty = true;
             }
 
             if (PriceTextBox.TextName == "")
-            {
-                //PriceTextBox.BorderColor = Color.FromArgb(255, 128, 128);
+            {                
                 PriceErrorLabel.Visible = true;
                 FlagEmpty = true;
             }
@@ -278,8 +248,7 @@ namespace AutomationApp
             if (BetNDSTextBox.Text != "")
             {
                 if (Convert.ToInt32(BetNDSTextBox.Text) <= 0)
-                {
-                    //SumNDSTextBox.BorderColor = Color.FromArgb(255, 128, 128);
+                {                    
                     BetErrorLabel.Visible = true;
                     FlagEmpty = true;
                 }
@@ -303,7 +272,7 @@ namespace AutomationApp
             {
                 for (int i = 0; i < RowsCount; i++)
                 {
-                    if (Convert.ToInt32(EditTradeNote.itemsProductsNoteDataGridView.Rows[i].Cells[2].Value) == Convert.ToInt32(ID_ProductsWarehouse)) ;
+                    if (Convert.ToInt32(EditTradeNote.itemsProductsNoteDataGridView.Rows[i].Cells[2].Value) == Convert.ToInt32(ID_ProductsWarehouse))
                     {
                         ModelTextBox.BorderColor = Color.FromArgb(255, 128, 128);
                         ModelErrorLabel.Text = "Выбранный продукт уже есть в товарной накладной";

@@ -68,8 +68,7 @@ namespace AutomationApp
             this.TitleBarLabel.Name = "TitleBarLabel";
             this.TitleBarLabel.Size = new System.Drawing.Size(440, 36);
             this.TitleBarLabel.TabIndex = 8;
-            this.TitleBarLabel.Text = "Отчет по приходному ордеру";
-            this.TitleBarLabel.Click += new System.EventHandler(this.TitleBarLabel_Click);
+            this.TitleBarLabel.Text = "Отчет по приходному ордеру";            
             // 
             // MaximizedButton
             // 

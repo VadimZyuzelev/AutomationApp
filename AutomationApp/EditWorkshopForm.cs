@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
 
@@ -15,8 +10,8 @@ namespace AutomationApp
     {
         private const int CS_DROPSHADOW = 0x20000;
 
-        private WorkshopForm WorkshopForm;
-        private bool FlagEdit;
+        private readonly WorkshopForm WorkshopForm;
+        private readonly bool FlagEdit;
 
         private int ID_Workshop;
         private int ID_Brigade;
