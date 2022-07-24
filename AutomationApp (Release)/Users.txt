@@ -1,0 +1,7 @@
+Пользователи:
+CutPicker
+WarehouseCloth
+WarehouseFurniture
+WarehouseProducts
+
+Пароль: qwerty123

@@ -131,3 +131,4 @@ D:\1111Univer\5 курс\Диплом\ПО\AutomationApp(Release)\AutomationApp\
 D:\1111Univer\5 курс\Диплом\ПО\AutomationApp(Release)\AutomationApp\AutomationApp\obj\Debug\AutomationApp.EditTradeNoteForm.resources
 D:\1111Univer\5 курс\Диплом\ПО\AutomationApp(Release)\AutomationApp\AutomationApp\obj\Debug\AutomationApp.ReportReceivedItemForm.resources
 D:\1111Univer\5 курс\Диплом\ПО\AutomationApp(Release)\AutomationApp\AutomationApp\obj\Debug\AutomationApp.EditProductsInNoteForm.resources
+D:\1111Univer\5 курс\Диплом\ПО\AutomationApp(Release)\AutomationApp\AutomationApp\obj\Debug\AutomationApp.csprojAssemblyReference.cache
