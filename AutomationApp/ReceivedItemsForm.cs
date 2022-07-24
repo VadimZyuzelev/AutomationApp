@@ -43,8 +43,8 @@ namespace AutomationApp
                 string SizeItem = null;
                 string FullnessItem = null;
                 string ColorItem = null;
-                string CountItem = null;
-                string SortItem = null;
+                string CountItem;
+                string SortItem;
 
                 int CountRows = this.automationAppDBDataSet.Маршрутные_листы.Count;
                 int SelectedRecievedItem = Convert.ToInt32(((DataRowView)this.изделияпринятыенаскладBindingSource.Current).Row["ID_Маршрутного_листа"]);

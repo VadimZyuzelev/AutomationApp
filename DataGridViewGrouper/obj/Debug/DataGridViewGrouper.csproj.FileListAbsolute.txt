@@ -1,0 +1,11 @@
+C:\Users\Вадим\Desktop\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\bin\Debug\DataGridViewGrouper.dll.config
+C:\Users\Вадим\Desktop\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\bin\Debug\DataGridViewGrouper.dll
+C:\Users\Вадим\Desktop\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\bin\Debug\DataGridViewGrouper.pdb
+C:\Users\Вадим\Desktop\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Debug\DataGridViewGrouper.csprojAssemblyReference.cache
+C:\Users\Вадим\Desktop\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Debug\Subro.Controls.DataGridViewGrouperControl.resources
+C:\Users\Вадим\Desktop\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Debug\DataGridViewGrouper.Properties.Resources.resources
+C:\Users\Вадим\Desktop\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Debug\Subro.Controls.SearchBoxBase.resources
+C:\Users\Вадим\Desktop\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Debug\DataGridViewGrouper.csproj.GenerateResource.cache
+C:\Users\Вадим\Desktop\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Debug\DataGridViewGrouper.csproj.CoreCompileInputs.cache
+C:\Users\Вадим\Desktop\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Debug\DataGridViewGrouper.dll
+C:\Users\Вадим\Desktop\DataGridViewGrouper\DataGridViewGrouper\DataGridViewGrouper\obj\Debug\DataGridViewGrouper.pdb
