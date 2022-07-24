@@ -35,7 +35,7 @@ namespace AutomationApp
             get
             {
                 CreateParams cp = base.CreateParams;
-                cp.ExStyle = cp.ExStyle | WS_EX_TRANSPARENT;
+                cp.ExStyle |= WS_EX_TRANSPARENT;
                 return cp;
             }
         }

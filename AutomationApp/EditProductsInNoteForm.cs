@@ -188,7 +188,6 @@ namespace AutomationApp
                     Price = Convert.ToDecimal(PriceTextBox.TextName);
                     CostProducts = Convert.ToDecimal(EndPriceTextBox.TextName);
                     BetNDS = Convert.ToInt32(BetNDSTextBox.TextName);
-                    SumNDS = Convert.ToInt32(SumNDSTextBox.TextName);
                     TotalWithNDS = Convert.ToInt32(TotalNDSTextBox.TextName);
 
                     if (BetNDSTextBox.Text == "")
